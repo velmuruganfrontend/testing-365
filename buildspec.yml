@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run gulp_scss
+  post_build:
+    commands:
+      - rm -rf node_modules
+artifacts:
+  files:
+    - '**/*'

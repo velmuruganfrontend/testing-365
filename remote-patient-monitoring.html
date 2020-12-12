@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+      <title>MyRx365 - Remote Patient Monitoring</title>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+      <!-- <link rel="stylesheet" href="css/reset.css"> -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+      <link rel="icon" href="images/favicon.png" />
+      <link rel="stylesheet" href="dist/static/css/custom.css">
+      <!-- Custom Css -->
+      <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+      <script type="text/javascript" src="js/useragent.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   </head>
+   <style type="text/css">
+      .textleft{
+      left: 20px
+      }
+      .textfont-weight{
+      font-weight: 600;
+      font-size: 20px;
+      }
+      .mbtext{
+      margin-bottom: 60px;
+      }
+      .inline-photo {
+         opacity: 0;
+         transform: translateY(4em) rotateZ(-5deg);
+         transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                     opacity .3s .25s ease-out;
+         will-change: transform, opacity; 
+      }
+      .inline-photo.is-visible {
+      opacity: 1;
+      transform: scale(1.2);
+      }
+
+
+      .main-photo {
+      transform: scale(.8);
+      }
+
+      .heading {
+      transform: translate(-50%, calc(-50% + 1em));
+      }
+
+      .is-visible .main-photo {
+      transform: none;
+      }
+
+      .is-visible .heading {
+      transform: translate(-50%, -50%);
+      }
+
+      .main-photo,
+      .heading {
+      transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                  filter 10s 2s ease-out;
+      will-change: transform;
+      }
+      img.inline-photo.show-on-scroll.is-visible {
+         transform: scale(1);
+      }
+      .img .inline-photo {
+         transform: translateY(2em) rotateZ(-5deg);
+      } 
+   </style>
+   <body>
+      <div class="rpm">
+         <div class="div-only-mobile">
+            <div class="top-note">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xs-3">
+                        <img class="img-responsive" src="images/favicon.png" />
+                     </div>
+                     <div class="col-xs-6">
+                        <h3>MyRx365</h3>
+                        <p>Download the app on your device</p>
+                     </div>
+                     <div class="col-xs-3">
+                        <a class="button-link ios-btn" href="https://itunes.apple.com/us/developer/telehealer-inc/id1437457935">Install</a>
+                        <a class="button-link android-btn" href="https://play.google.com/store/apps/details?id=com.thealer">Install</a>
+                     </div>
+                  </div>
+               </div>
+               <a href="#" class="close-link"><i class="fa fa-window-close"></i></a>
+            </div>
+         </div>
+         <div class="container-fluid">
+            <div class="">
+               <header>
+                  <nav class="nav row pt-20">
+                     <div class="menu-img col-xs-2 col-sm-4" id="hanbur-icon"><img src="images/hambur.svg" class="cursor-pointer"><span class="menu">Menu</span></div>
+                     <!-- <div class="logo col-sm-2"><img src="images/log.svg" alt="logo"></div> -->
+                     <div class="center-menu col-xs-7  col-sm-4 text-align-center">
+                        <div> 
+                           <a  class="" href="index.html">
+                           <img src="images/log.svg" alt="logo">
+                           </a>
+                        </div>
+                     </div>
+                     <!--div class="login col-xs-3 col-sm-4 pull-right">
+                        <ul class="pull-right">
+                           <li class=""><a href="#">Login</a></li>
+                           <li><a class="Sign-up " href="#">Sign Up</a></li>
+                        </ul>
+                        </div-->
+                  </nav>
+                  <div class="side-menu">
+                     <div class="side-menu-header pt-20">
+                        <div id="close-icon" class="pl-10 cursor-pointer"><img src="images/cross-2.svg" class="img-responsive pull-left pl-10"></div>
+                     </div>
+                     <div class="menu-items">
+                        <ul>
+                           <li>
+                              <a href="index.html">Home</a>
+                           </li>
+                           <li>
+                              <a href="#" class="activebtn">RPM</a>   
+                           </li>
+                           <li>
+                              <a href="providers.html">Providers</a>
+                           </li>
+                           <li>
+                              <a href="patients.html">Patients</a>
+                           </li>
+                           <li>
+                              <a href="vitals-devices.html">Devices</a>
+                           </li>
+                           <li>
+                              <a href="about.html">About</a>
+                           </li>
+                           <li>
+                              <a href="support.html">Support</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="right-img">
+                        <img class="img-responsive" src="images/menu-right.png">
+                     </div>
+                  </div>
+               </header>
+            </div>
+         </div>
+         <div class="banner-wrap" id="banner-wrap">
+            <div class="hero-grand">
+               <div class="hero-parent">
+                  <div class="hero-firstchild">
+                  </div>
+                  <div class="hero-secondchild">
+                       <div class="hero-content">
+                          <h2 class="hero-heading">Remote Patient Monitoring</h2>
+                          <p class="hero-desc">The Future and Benefits of Remote Patient Monitoring.</p>
+                          <div class="hero-actions hidden-sm hidden-xs">
+                             <div class="hero-action">
+                                <div class="action-one">
+                                   <a class="myrx button-primary" href="/transfer-myrx.html">Switch to MyRx365</a>
+                                 </div>
+                                 <div class="action-two pt-20"> 
+                                   <a class="download-app" href="/downloads.html">Download App</a> 
+                                 </div>
+                             </div>
+                          </div>
+                       </div>
+                  </div>
+                  <div class="hero-actions mobile visible-sm visible-xs">
+                     <div class="hero-action">
+                        <div class="action-one">
+                           <a class="myrx button-primary" href="/transfer-myrx.html">Switch to MyRx365</a>
+                         </div>
+                         <div class="action-two pt-20"> 
+                           <a class="download-app" href="/downloads.html">Download App</a> 
+                         </div>
+                     </div>
+                  </div> 
+               </div><!--hero-parent-->
+            </div>
+            <!-- <div class="img-responsive">
+               <picture>
+                  <source media="(max-width:761px)" srcset="images/rpm/banner-rpm-mobile-myrx-3@2x.svg" class="img-responsive">
+                  <img src="images/rpm/banner-rpm-myrx-3@2x.svg" class="img-responsive width-100" alt="banner">
+               </picture>
+            </div>
+            <div class="banner-content banner-content-patient">
+               <div>
+                  <h2 class="main-title-heading text-align-center">Remote Patient Monitoring</h2>
+                  <p class="banner-title">The Future and Benefits of Remote Patient Monitoring.</p>
+               </div>
+               <div class="button-wrap pt-50">
+                  <div><a  class="myrx button-primary" href="transfer-myrx.html">Switch to MyRx365</a></div>
+                  <div class="pt-20"><a class="download-app" href="downloads.html">Download App</a></div>
+               </div>
+            </div> -->
+         </div> <!--banner-wrap-->
+         <div class="rpm-s-o"> <!-- Section 1 -->
+            <div class="container">
+               <div class="rpm-s-o-top text-center">
+                  <h2 class="main-head">
+                     Remote Patient Monitoring
+                  </h2>
+                  <p class="desc">
+                     Remote patient monitoring is a relatively new offering and has increased in momentum as providers look for new ways to serve their patients in an aging population. The updated CPT codes and CMS fee schedule for 2020 has a positive impact in overall revenues while helping drive better patient outcomes.
+                  </p>
+               </div>
+               <div class="rpm-s-o-bottom text-center">
+                  <h2 class="main-head">
+                     ReImagine your experience
+                  </h2>
+                  <p class="desc">
+                     Beginning in 2019, remote patient monitoring has taken effect.
+                  </p>
+                  <div class="date">
+                     The following new codes are effective as on <span>January 1, 2020:</span>
+                  </div>
+               </div>
+            </div>
+         </div> <!-- Section 1 -->
+         
+         <div class="rpm-s-t"> <!-- Section 2 -->
+            <div class="wrapper-bg">
+               <div class="container">
+                  <div class="w-parents">
+                     <div class="child">
+                        <div class="child-ui">
+                           <div class="top">
+                              CPT Code 99453:
+                           </div>
+                           <div class="bottom">
+                              Remote monitoring of physiologic parameter(s) (e.g., weight, blood pressure, pulse oximetry, respiratory flow rate), initial set-up; and patient education on use of equipment.
+                           </div>
+                        </div>
+                     </div>
+                     <div class="child">
+                        <div class="child-ui">
+                           <div class="top">
+                              CPT Code 99454:
+                           </div>
+                           <div class="bottom">
+                              Remote monitoring … device(s) supply with daily recording(s) or programmed alert(s) transmission, each 30 days.
+                           </div>
+                        </div>
+                     </div>
+                     <div class="child">
+                        <div class="child-ui">
+                           <div class="top">
+                              CPT Code 99457:
+                           </div>
+                           <div class="bottom">
+                              Remote physiologic monitoring treatment management services, 20 minutes or more of clinical staff/physician/other qualified healthcare professional time in a calendar month requiring interactive communication with the patient/caregiver during the month.
+                           </div>
+                        </div>
+                     </div>
+                     <div class="child">
+                        <div class="child-ui">
+                           <div class="top">
+                              CPT Code 99458:
+                           </div>
+                           <div class="bottom">
+                              Remote physiologic monitoring treatment management services, additional 20 minutes or more of clinical staff/physician/other qualified healthcare professional time in a calendar month requiring interactive communication with the patient/caregiver during the month.
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="w-description">
+                     Under the new codes, Medicare pays for the initial setup, the device and the continuing management of remote monitoring programs in accordance with adherence to reimbursement requirements.
+                  </div>
+               </div>
+            </div>
+         </div><!-- Section 2 -->
+
+         <div class="rpm-s-tr"> <!-- Section 3 -->
+            <div class="container">
+               <div class="header text-center">
+                  <h2 class="main-head">
+                     Advantages of MyRx365’s Remote Patient Monitoring Program
+                  </h2>
+                  <div class="small-desc">
+                     Advantages of MyRx365’s Remote Patient Monitoring Program
+                  </div>
+               </div>
+               <div class="main text-center">
+                  <ul class="row-one">
+                     <li>
+                        <div class="img">
+                          <img src="images/rpm/revenue.svg" alt="" class="inline-photo show-on-scroll is-visible">
+                        </div>
+                        <span>Earn more revenue</span>
+                     </li>
+                     <li>
+                        <div class="img">
+                           <img src="images/rpm/better.svg" alt="" class="inline-photo show-on-scroll is-visible">
+                        </div>
+                        <span>Drive better patient outcomes</span>
+                     </li>
+                     <li>
+                        <div class="img">
+                          <img src="images/rpm/hospital.svg" alt="" class="inline-photo show-on-scroll is-visible">
+                        </div>
+                        <span>Decrease emergency room visits and hospital stays</span>
+                     </li>
+                     <li>
+                        <div class="img">
+                           <img src="images/rpm/vital.svg" alt="" class="inline-photo show-on-scroll is-visible">
+                        </div>
+                        <span>Monitor patient vitals when they are outside your office</span>
+                     </li>
+                  </ul>
+                  <ul class="row-two">
+                     <li>
+                        <div class="img">
+                          <img src="images/rpm/reminder.svg" alt="" class="inline-photo show-on-scroll is-visible">
+                        </div>
+                        <span>Automatic reminders for patients to measure vitals</span>
+                     </li>
+                     <li>
+                        <div class="img">
+                           <img src="images/rpm/feedback.svg" alt="" class="inline-photo show-on-scroll is-visible">
+                        </div>
+                        <span>Immediate feedback based on their results</span>
+                     </li>
+                     <li>
+                        <div class="img">
+                          <img src="images/rpm/schedule.svg" alt="" class="inline-photo show-on-scroll is-visible">
+                        </div>
+                        <span>Use our feature-rich platform to also secure message/call, Schedule Appts, Place Orders</span>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div><!-- Section 3 -->
+
+         <div class="rpm-s-f"> <!-- Section 4 -->
+            <div class="container">
+                   <div class="simple-steps text-center">
+                      <h2 class="main-head">
+                        3 Simple steps
+                      </h2>
+                      <!--<div class="sub-text">
+                         <p>
+                           When it comes to Remote <b>Patient Monitoring</b>, we can do it all for you and you can get started in 3 simple steps
+                         </p>
+                      </div>-->
+                      <!--<div class="tracking">
+                         <div class="t-childs">
+                              <div class="t-child">
+                                 <div class="t-parent">
+                                    <div class="t-top">
+                                       1
+                                    </div>
+                                    <div class="t-bottom">
+                                       <b>Sign Up</b>
+                                       <p>
+                                          We’ll recruit and onboard your patients onto our platform 
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div> 
+                              <div class="t-child">
+                                 <div class="t-parent">
+                                    <div class="t-top">
+                                       2
+                                    </div>
+                                    <div class="t-bottom">
+                                       <b>Monitor</b>
+                                       <p>
+                                          Our staff will communicate, and monitor your patient’s physiological parameters using supplied devices
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="t-child">
+                                 <div class="t-parent">
+                                    <div class="t-top t-top-three">
+                                       3
+                                    </div>
+                                    <div class="t-bottom">
+                                       <b>Get Paid</b>
+                                       <p>
+                                          We will help your biller to bill for the remote patient monitoring services.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div><
+                         </div>
+                      </div> -->
+                      <!--<div class="divide-line">
+                      </div>--> 
+                      <div class="sub-text sub-text-next  mt-60">
+                        <p>
+                           When it comes to <b>Remote Patient Monitoring</b>, we can do it all for you and you can get started in 3 simple steps
+                        </p>
+                     </div>
+                     <div class="tracking">
+                        <div class="t-childs">
+                             <div class="t-child">
+                                <div class="t-parent">
+                                   <div class="t-top">
+                                      1
+                                   </div>
+                                   <div class="t-bottom">
+                                      <b>Sign Up</b>
+                                      <p>
+                                       Recruit and onboard your patients onto our platform
+                                      </p>
+                                   </div>
+                                </div>
+                             </div> <!--t-child-->
+                             <div class="t-child">
+                                <div class="t-parent">
+                                   <div class="t-top">
+                                      2
+                                   </div>
+                                   <div class="t-bottom">
+                                      <b>Monitor</b>
+                                      <p>
+                                       Communicate and monitor your patient’s physiological parameters using supplied devices
+                                      </p>
+                                   </div>
+                                </div>
+                             </div><!--t-child-->
+                             <div class="t-child">
+                                <div class="t-parent">
+                                   <div class="t-top t-top-three">
+                                      3
+                                   </div>
+                                   <div class="t-bottom">
+                                      <b>Get Paid</b>
+                                      <p>
+                                        Bill for the remote patient monitoring services.
+                                      </p>
+                                   </div>
+                                </div>
+                             </div><!--t-child-->
+                        </div>
+                     </div>
+                   </div> 
+                   <div class="under-the-code">
+                     Under the new codes, Medicare pays for the initial setup, the device and the continuing management of remote monitoring programs in accordance with adherence to reimbursement requirements.
+                   </div>
+<!--
+                   <div class="highlites">
+                     * Not counting initiation of service reimbursements
+                   </div>
+                   <div class="pricing-monthlys">
+                        <div class="pricing-monthly">
+                           <div class="pricing-band">
+                              <div class="top">
+                                 Avg. Practice
+                              </div>
+                              <div class="bottom">
+                                 100 pt. monthly
+                              </div>
+                           </div>
+                        </div>
+                        <div class="pricing-monthly">
+                           <div class="pricing-band">
+                              <div class="top">
+                                 PCP Earns
+                              </div>
+                              <div class="bottom">
+                                 $ 11,500 monthly
+                              </div>
+                           </div>
+                        </div>
+                        <div class="pricing-monthly">
+                           <div class="pricing-band">
+                              <div class="top">
+                                 MCR Pays 
+                              </div>
+                              <div class="bottom">
+                                 $ 115 monthly
+                              </div>
+                           </div>
+                        </div>
+                        <div class="pricing-monthly">
+                           <div class="pricing-band">
+                              <div class="top">
+                                 Annually
+                              </div>
+                              <div class="bottom">
+                                 $ 138,000*
+                              </div>
+                           </div>
+                        </div>
+                   </div>
+-->
+            </div>
+         </div><!-- Section 4 -->
+         <div class="container typo rpm-s-fi"><!-- Section 5 -->
+            <h2 class="text-align-center main-head">About Our Remote Patient <br>Monitoring Devices</h2>
+            <p class="text-align-center desc">MyRx365 builds technology to improve your patients’ outcomes and experience. The Remote Patient Monitoring feature allows patients to use their own devices and manually capture their vitals or a set of bluetooth enabled devices that automatically capture the patient’s physiological parameters and transmit the data to you or your staff.</p>
+            <br/>
+            <h4 class="text-align-center bold captured">The following parameters are captured:</h4>
+            <div class="rpm-device">
+               <div class="rpm-device-1">
+                  <img src="images/devices/iHealthTrack.png" class="img-responsive"/>
+                  <div class="pt-10">Blood Pressure &<br> Pulse Rate</div>
+               </div>
+               <div class="rpm-device-1">
+                  <img src="images/devices/iHealthLite.png" class="img-responsive"/>
+                  <div class="pt-10">Weight</div>
+                  <br>
+               </div>
+               <div class="rpm-device-1">
+                  <img src="images/devices/iHealthSmart.png" class="img-responsive"/>
+                  <div class="pt-10">Blood Glucose</div>
+                  <br>
+               </div>
+               <div class="rpm-device-1">
+                  <img src="images/devices/iHealthTS28B.png" class="img-responsive"/>
+                  <div class="pt-10">Body Temperature</div>
+                  <br>
+               </div>
+               <div class="rpm-device-1">
+                  <img src="images/devices/iHealthAir.png" class="img-responsive"/>
+                  <div class="pt-10">Pulse Oximeter</div>
+                  <br>
+               </div>
+            </div>
+         </div><!-- Section 5 -->
+
+
+         <div class="container typo mt-100 m-ma-0 rpm-s-s">
+            <div class="row">
+               <div class="col-sm-12 col-sm-6 col-md-6"><img src="/images/traking-device.png" class="img-responsive inline-photo show-on-scroll is-visible"/></div>
+               <div class="col-sm-12 col-sm-6 col-md-6">
+                  <h2 class="m-text-center">Embrace the Future of Concierge Medicine and MyRx365</h2>
+                  <p>CMS’ digital transformation came just in time for overwhelmed home care agencies and hospitals trying to reduce the number of patients in the emergency rooms. Now, you can stay connected, you can involve your clinical staff more, and you can be paid or reimbursed for using new technology, like MyRx365, to solve old issues and keep your patients healthier at home.</p>
+               </div>
+            </div>
+         </div>
+
+
+
+         <br/><br/>
+         <footer class="m-container-fluid">
+            <div class="container-wrap">
+               <div class="footer-top">
+                  <div class="row">
+                     <div class="f-left">
+                        <h3 class="main-title">About</h3>
+                        <p>MyRx365 is a telehealth and remote patient monitoring platform that allows patients to visit doctors remotely through a private and secure audio/video call.</p>
+                        <div class="share">
+                           <ul class="list-inline">
+                              <li class="list-inline-item"><a href="https://twentydegrees.page.link/facebook" target="_blank"><i
+                                 class="fa fa-facebook"></i></a></li>
+                              <li class="list-inline-item"><a href="https://twentydegrees.page.link/twitter" target="_blank"><i
+                                 class="fa fa-twitter"></i></a></li>
+                              <li class="list-inline-item"><a href="https://twentydegrees.page.link/insta" target="_blank"><i
+                                 class="fa fa-instagram"></i></a></li>
+                              <li class="list-inline-item"><a href="https://twentydegrees.page.link/linkedin" target="_blank"><i
+                                 class="fa fa-linkedin"></i></a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="f-right">
+                        <div class="footer-info">
+                           <h3 class="main-title-small">Information</h3>
+                           <ul class="list-unstyled">
+                              <li><a href="blog.html">Blog</a></li>
+                              <li><a href="info-release.html">Info Release</a></li>
+                              <li><a href="legal.html">Legal</a></li>
+                              <!--li><a href="assets/Telehealer-Patient-Brochure-Updated.pdf">Brochure (Patient)</a>
+                                 </li>
+                                 <li><a href="assets/Telehealer-Doctor-Brichure-Updated.pdf">Brochure (Doctor)</a>
+                                 </li-->
+                              <li><a href="support.html">Support</a></li>
+                           </ul>
+                        </div>
+                        <div class="footer-quicks">
+                           <h3 class="main-title-small">Quick Links</h3>
+                           <ul class="list-unstyled">
+                              <li><a href="remote-patient-monitoring.html">RPM</a></li>
+                              <!--li><a href="#">Reimbursements</a></li-->
+                              <li><a href="faq.html">FAQs</a></li>
+                              <!--li><a href="#">Medical Assistants</a></li-->
+                              <li><a href="assets/Patient-care-plan-.pdf">Patient Care Plan</a></li>
+                              <li><a href="assets/Value-based-care-registry.pdf">Value Based Care</a></li>
+                              <li><a href="assets/Valued-care-agreement.pdf">Value Care Agreement</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <div class="footer-bottom">
+            <p class="text-center">MyRx365, Inc. (c) Copyrights 2020. All rights reserved  95-31 Sutphin Blvd, Jamaica, NY 11435, United States</p>
+         </div>
+         <div class="overlay" ></div>
+      </div>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEZ1FQLHPK"></script>
+      <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+         gtag('js',new Date());gtag('config','G-BEZ1FQLHPK');
+
+         // Detect request animation frame
+var scroll = window.requestAnimationFrame ||
+             // IE Fallback
+             function(callback){ window.setTimeout(callback, 1000/60)};
+var elementsToShow = document.querySelectorAll('.show-on-scroll'); 
+
+function loop() {
+
+    Array.prototype.forEach.call(elementsToShow, function(element){
+      if (isElementInViewport(element)) {
+        element.classList.add('is-visible');
+      } else {
+        element.classList.remove('is-visible');
+      }
+    });
+
+    scroll(loop);
+}
+
+// Call the loop for the first time
+loop();
+
+// Helper function from: http://stackoverflow.com/a/7557433/274826
+function isElementInViewport(el) {
+  // special bonus for those using jQuery
+  if (typeof jQuery === "function" && el instanceof jQuery) {
+    el = el[0];
+  }
+  var rect = el.getBoundingClientRect();
+  return (
+    (rect.top <= 0
+      && rect.bottom >= 0)
+    ||
+    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+    ||
+    (rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+  );
+}
+      </script>
+   </body>
+</html>

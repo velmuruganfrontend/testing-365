@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MyRx365</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="dist/static/css/custom.css">
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body class="transfer-rx-body">
+    <header class="transfer-header">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/log.svg" alt="" >
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="transfer-body">
+        <div class="container-fluid">
+            <div class="tranfer-parent row">
+                <div class="transfer-left col-md-4 col-sm-12">
+                <div class="transfer-left-inner">
+                    <img src="./images/transfer-med.svg" alt="" >
+                </div>
+                </div>
+                <div class="transfer-right col-md-8 col-sm-12">
+                    <div class="transfer-right-inner">
+                        <div class="success-block">
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                            <div class="success-text">Request submitted successfully</div>
+                        </div>
+                        <div class="transfer-wrap">
+                            <div class="mt-40">
+                                <h1>Prescription Transfer</h1>
+                            </div>
+                            <div class="form-group input-wrapper-rx">
+                                    <label class="form-label pharma-code" for="pharmaCode">First, lets check to see if we’re in your area</label>
+                                    <input id="pharmaCode" class="form-input" type="text"/>
+                                    <span class="zip-error">Please enter valid zip code</span>
+                            </div>
+                            <form action="" id="pharma-form">
+                                <div class="auto-complete-field">
+                                    <div class="pharma-name">Great, now plz enter your pharma name</div>
+                                    <div class="form-group input-wrapper-rx pharma-input-wrap">
+                                        <label class="form-label" for="autocomplete">Enter pharma name</label>
+                                        <input id="autocomplete" class="form-input" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-group input-wrapper-rx input-wrapper-pharma">
+                                    <div class="pharma-name-info"></div>
+                                    <div class="pharma-address"></div>
+                                    <input id="pharma-name" class="form-input" type="hidden" />
+                                    <input id="pharma-address" class="form-input" type="hidden" />
+                                    <span class="wals-green">&#10799</span>
+                                </div>
+                                <div class="user-info">
+                                    <div class="pharma-name">Enter your details</div>
+                                        <div class="pharma-names">
+                                            <div class="form-group input-wrapper-rx">
+                                                <label class="form-label" for="fname">First name</label>
+                                                <input id="fname" class="form-input" type="text" />
+                                            </div>
+                                            <div class="form-group input-wrapper-rx">
+                                                <label class="form-label" for="lname">Last name</label>
+                                                <input id="lname" class="form-input" type="text" />
+                                            </div>
+                                            <div class="form-group input-wrapper-rx">
+                                                <label class="form-label" for="phone">Mobile phone</label>
+                                                <input id="phone" class="form-input" type="text" />
+                                            </div>
+                                            <div class="form-group input-wrapper-rx">
+                                                <label class="form-label" for="dob">Date of Birth</label>
+                                                <input id="datepicker" class="form-input" type="text" />
+                                            </div>
+                                        </div>     
+                                        <div class="form-group input-wrapper-rx dropdown-vals">
+                                            <label class="form-label" for="medicine">Medications</label>
+                                            <input id="medicine" class="form-input" type="text" />
+                                            <div class="dropdown-val">
+                                                <div id="med-lable"></div>
+                                            </div> 
+                                            <div class="throbber-loader c-throbber-loader">
+                                                <img src="images/throbber.gif" />
+                                            </div>  
+                                        </div>
+                                        <div class="form-group input-wrapper-rx terms-wrap">
+                                            <label class="container-rx">Transfer all prescriptions on file
+                                                <input type="checkbox" >
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group input-wrapper-rx terms-wrap">
+                                            <label class="container-rx">I agree to MyRx365’s 
+                                                <a href="t_c_patient.html">Terms and conditions,</a>
+                                                <a href="privacy.html">Privacy Policy, </a>and received the
+                                                <a href="npp.html">Notice of Privacy Practices</a>
+                                                <input type="checkbox" >
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <a class="tranfer-myrx-submit" href="javascript:void(0)">Transfer to MyRx365</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> <!--Col-->
+            </div>
+        </div> <!--container-fluid-->
+    </div> <!--Transfer body-->
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-DStG1wJTHgHfRWXgAFXdMOGAp1sTkJM&sensor=false&libraries=places"></script>
+    <script src="js/tranfer-myrx.js"></script>
+</body>
+
+</html

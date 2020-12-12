@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyRx365 - Supported Devices </title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet" />
+	<!-- <link rel="stylesheet" href="css/reset.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+	<link rel="icon" href="images/favicon.png" />
+	 <!-- Custom Css -->
+	 <link rel="stylesheet" href="dist/static/css/custom.css">
+	 <!-- Custom Css -->
+    
+	<script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+	<script type="text/javascript" src="js/useragent.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+	.blue-textclr{
+		color: #339eff !important;
+	}
+	.center-menu img{
+		width: auto;
+	}
+	.no-padding{
+		padding-left: 0 !important;
+        padding-right: 0px !important;
+	}
+</style>
+<body class="devices-body">
+	<div class="div-only-mobile">
+		<div class="top-note">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-3">
+						<img class="img-responsive" src="images/favicon.png" />
+					</div>
+					<div class="col-xs-6">
+						<h3>MyRx365</h3>
+						<p>Download the app on your device</p>
+					</div>
+					<div class="col-xs-3">
+						<a class="button-link ios-btn" href="https://itunes.apple.com/us/developer/telehealer-inc/id1437457935">Install</a>
+						<a class="button-link android-btn" href="https://play.google.com/store/apps/details?id=com.thealer">Install</a>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="close-link"><i class="fa fa-window-close"></i></a>
+		</div>
+	</div>
+	<header class="container-fluid">
+		<nav class="nav row pt-20">
+                <div class="menu-img col-xs-3 col-sm-2" id="hanbur-icon"><img src="images/hambur.svg" class="cursor-pointer"><span class="menu">Menu</span></div>
+                <!-- <div class="logo col-sm-2"><img src="images/log.svg" alt="logo"></div> -->
+                <div class="center-menu col-xs-5  col-sm-7 text-align-center">
+                    <a  class="" href="index.html">
+                        <img src="images/log.svg" alt="logo">
+                    </a>
+                </div>
+                <!--div class="login col-xs-4 col-sm-3 pull-right">
+                    <ul class="pull-right">
+                        <li class=""><a href="#">Login</a></li>
+                        <li><a class="Sign-up " href="#">Sign Up</a></li>
+                    </ul>
+                </div-->    
+            </nav>
+            <div class="side-menu">
+                <div class="side-menu-header pt-20">
+                    <div id="close-icon" class="pl-10 cursor-pointer"><img src="images/cross-2.svg" class="img-responsive pull-left pl-10"></div>
+                    
+                </div>
+                <div class="menu-items">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                         <a href="remote-patient-monitoring.html">RPM</a>   
+                        </li>
+                        <li>
+                            <a href="providers.html">Providers</a>
+                        </li>
+                        <li>
+                            <a href="patients.html">Patients</a>
+                        </li>
+                        <li>
+                            <a href="#"class="activebtn">Devices</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-img">
+                    <img class="img-responsive" src="images/menu-right.png">
+                </div>
+                <ul class="sub-menu">
+                    <li>
+                        
+                    </li>
+                    <li>
+                     <a href="support.html">Support</a>
+                    </li>
+                </ul>
+            </div>
+
+		<!-- <div class="container">
+			<div class="banner">
+				<div id="carouselSlides" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="images/banner/devices.jpg" class="d-block w-100" alt=".">
+						</div>
+					</div>
+				</div>
+				<div class="animation-text animation-right">
+					<div class="row">
+						<div class="col-sm-6">
+							<h1>Supported Devices</h1>
+							<p>Purchase only the devices your need</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	</header>
+	<div class="banner-wrap" id="banner-wrap">
+		<div class="hero-grand">
+		   <div class="hero-parent">
+			  <div class="hero-firstchild b-devices">
+			  </div>
+			  <div class="hero-secondchild">
+				   <div class="hero-content">
+					  <h2 class="hero-heading">Supported Devices</h2>
+					  <p class="hero-desc">Purchase only the devices your need</p>
+					  <div class="hero-actions hidden-sm hidden-xs">
+						 <div class="hero-action">
+							<div class="action-one">
+							   <a class="myrx button-primary" href="/transfer-myrx.html">Switch to MyRx365</a>
+							 </div>
+							 <div class="action-two pt-20"> 
+							   <a class="download-app" href="/downloads.html">Download App</a> 
+							 </div>
+						 </div>
+					  </div>
+				   </div>
+			  </div>
+			  <div class="hero-actions mobile visible-sm visible-xs">
+				 <div class="hero-action">
+					<div class="action-one">
+					   <a class="myrx button-primary" href="/transfer-myrx.html">Switch to MyRx365</a>
+					 </div>
+					 <div class="action-two pt-20"> 
+					   <a class="download-app" href="/downloads.html">Download App</a> 
+					 </div>
+				 </div>
+			  </div> 
+		   </div><!--hero-parent-->
+		</div>
+	</div> 
+	<div class="overlap-empty-wrap">&nbsp;</div>	
+	<div class="content marketing-myrx">
+		<div class="container typo">
+			<div class="bg-blue-box">
+                <p>The patient can manually measure their vitals using any of their existing remote patient monitoring devices and chart their results manually or automatically via integrations with Apple Health and Google Fit. Optionally, patients can make a one-time purchase from a list of remote patient monitoring devices <a class="my-link" href="https://ihealthlabs.com" target="_blank">here</a>. Following are a list of currently supported remote patient monitoring devices. The list includes FDA approved remote patient monitoring devices from iHealthLabs, but soon enough will expand to include other remote patient monitoring companies.</p>
+				<p class="mt-30">Patients can purchase these remote patient monitoring devices directly from the manufacturer or other online vendors such as Amazon, and Jet.com.</p>
+			</div>
+
+			
+		<div class="content-section">
+			   <h2 class="main-title text-center">Blood Pressure</h2>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="device-box">
+							<div class="info">
+								<a href="https://ihealthlabs.com/blood-pressure-monitors/track#single/0" target="_blank" class="info-link" data-toggle="tooltip" title="iHealth Track (RPM Device)"><i class="info-icon"></i></a>
+							</div>
+							<div class="device-box-img boxshadow radious">
+								<img src="images/devices/iHealthTrack.png" />
+							</div>
+							<div class="device-bottom">
+								<h3>iHealth Track (RPM Device)</h3>
+								<div class="device-box-links">
+									<a target="_blank" href="https://www.google.com/search?q=ihealth+track" class="btn btn-device-1">Search & Buy</a>  
+									<div class="info m-info">
+									  <a href="https://ihealthlabs.com/blood-pressure-monitors/track#single/0" target="_blank" class="info-link" data-toggle="tooltip" title="iHealth Track (RPM Device)"><i class="info-icon"></i></a>
+								    </div>
+								</div>
+							</div>	
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="device-box">
+							<div class="info">
+								<a href="" class="info-link" data-toggle="tooltip" title="iHealth Feel (RPM Device)"><i class="info-icon"></i></a>
+							</div>
+							<div class="device-box-img boxshadow radious">
+								<img src="images/devices/iHealthFeel.png" />
+							</div>
+							<div class="device-bottom">
+								<h3>iHealth Feel (RPM Device)</h3>
+								<div class="device-box-links">
+									<a target="_blank" href="https://www.google.com/search?q=ihealth+feel" class="btn btn-device-1">Search & Buy</a>
+									<div class="info m-info">
+										<a href="" class="info-link" data-toggle="tooltip" title="iHealth Feel (RPM Device)"><i class="info-icon"></i></a>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="device-box">
+							<div class="info">
+								<a href="https://ihealthlabs.com/blood-pressure-monitors/ease-bp3l/#single/0" class="info-link" data-toggle="tooltip" title="iHealth Ease (RPM Device)"><i class="info-icon"></i></a>
+							</div>
+							<div class="device-box-img boxshadow radious">
+								<img src="images/devices/iHealthEase.png" />
+							</div>
+							<div class="device-bottom">
+								<h3>iHealth Ease (RPM Device)</h3>
+								<div class="device-box-links">
+									<a target="_blank" href="https://www.google.com/search?q=ihealth+ease" class="btn btn-device-1">Search & Buy</a>
+									<div class="info m-info">
+										<a href="https://ihealthlabs.com/blood-pressure-monitors/ease-bp3l/#single/0" class="info-link" data-toggle="tooltip" title="iHealth Ease (RPM Device)"><i class="info-icon"></i></a>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+        </div>
+		<div class="content-section">
+            <h2 class="main-title text-center"> Fitness Tracker </h2>
+            <div class="row">
+                <div class="col-sm-4">
+					<div class="device-box">
+						<div class="info">
+							<a href="https://www.youtube.com/watch?v=FyEamxwrDEs" class="info-link" data-toggle="tooltip" title="VeryFitPro (RPM Device)"><i class="info-icon"></i></a>
+						</div>
+						<div class="device-box-img boxshadow radious">
+							<img src="images/devices/AM-5.png" />
+						</div>
+						<div class="device-bottom">
+							<h3>VeryFitPro (RPM Device)</h3>
+							<div class="device-box-links">
+								<a target="_blank" href="https://www.google.com/search?q=VeryFitPro" class="btn btn-device-1">Search & Buy</a>
+								<div class="info m-info">
+									<a href="https://www.youtube.com/watch?v=FyEamxwrDEs" class="info-link" data-toggle="tooltip" title="VeryFitPro (RPM Device)"><i class="info-icon"></i></a>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+            </div>
+		</div>
+		<div class="content-section">
+			<div class="clearfix"></div>
+			<h2 class="main-title text-center">Weighing Scale</h2>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="device-box">
+						<div class="info">
+							<a href="https://ihealthlabs.com/wireless-scales/ihealth-lite/?add-to-cart=18643#single/0" class="info-link" data-toggle="tooltip" title="iHealth Lite (RPM Device)"><i class="info-icon"></i></a>
+						</div>
+						<div class="device-box-img boxshadow radious">
+							<img src="images/devices/iHealthLite.png" />
+						</div>
+						<div class="device-bottom">
+							<h3>iHealth Lite (RPM Device)</h3>
+							<div class="device-box-links">
+								<a target="_blank" href="https://www.google.com/search?q=ihealth+lite" class="btn btn-device-1">Search & Buy</a>
+								<div class="info m-info">
+									<a href="https://ihealthlabs.com/wireless-scales/ihealth-lite/?add-to-cart=18643#single/0" class="info-link" data-toggle="tooltip" title="iHealth Lite (RPM Device)"><i class="info-icon"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="device-box">
+						<div class="info">
+							<a href="https://ihealthlabs.com/wireless-scales/ihealth-core/#single/0" class="info-link" data-toggle="tooltip" title="iHealth Core (RPM Device)"><i class="info-icon"></i></a>
+						</div>
+						<div class="device-box-img boxshadow radious">
+							<img src="images/devices/iHealthCore.png" />
+						</div>
+						<div class="device-bottom">
+							<h3>iHealth Core (RPM Device)</h3>
+							<div class="device-box-links">
+								<a target="_blank" href="https://www.google.com/search?q=ihealth+core" class="btn btn-device-1">Search & Buy</a>
+								<div class="info m-info">
+									<a href="https://ihealthlabs.com/wireless-scales/ihealth-core/#single/0" class="info-link" data-toggle="tooltip" title="iHealth Core (RPM Device)"><i class="info-icon"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="col-sm-4">
+					<div class="device-box">
+						<div class="info">
+							<a href="https://www.youtube.com/watch?v=OIIHZm9DbBA" class="info-link" data-toggle="tooltip" title="iHealth Lina (RPM Device)"><i class="info-icon"></i></a>
+						</div>
+						<div class="device-box-img boxshadow radious">
+							<img src="images/devices/iHealthLite.png" />
+						</div>
+						<div class="device-bottom">
+							<h3>iHealth Lina (RPM Device)</h3>
+							<div class="device-box-links">
+								<a target="_blank" href="https://www.google.com/search?q=ihealth+lina" class="btn btn-device-1">Search & Buy</a>
+								<div class="info m-info">
+									<a href="https://www.youtube.com/watch?v=OIIHZm9DbBA" class="info-link" data-toggle="tooltip" title="iHealth Lina (RPM Device)"><i class="info-icon"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="content-section">
+
+			<h2 class="main-title text-center">Glucometer</h2>
+
+			<div class="row">
+				<div class="col-sm-4">
+					
+					<div class="device-box">
+						<div class="info">
+							<a href="https://www.youtube.com/watch?v=Tw6YbHYPZa8&feature=youtu.be&autoplay=1" class="info-link" data-toggle="tooltip" title="iHealth Smart (RPM Device)"><i class="info-icon"></i></a>
+						</div>
+						<div class="device-box-img boxshadow radious">
+							<img src="images/devices/iHealthSmart.png" />
+						</div>
+						<div class="device-bottom">
+							<h3>iHealth Smart (RPM Device)</h3>
+							<div class="device-box-links">
+								<a target="_blank" href="https://www.google.com/search?q=ihealth+smart" class="btn btn-device-1">Search & Buy</a>
+								<div class="info m-info">
+									<a href="https://www.youtube.com/watch?v=Tw6YbHYPZa8&feature=youtu.be&autoplay=1" class="info-link" data-toggle="tooltip" title="iHealth Smart (RPM Device)"><i class="info-icon"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+		<div class="content-section">
+			<h2 class="main-title text-center">Thermometer</h2>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="device-box">
+						<div class="info">
+							<a href="https://www.youtube.com/watch?v=Tw6YbHYPZa8&feature=youtu.be&autoplay=1" class="info-link" data-toggle="tooltip" title="iHealth Smart (RPM Device)"><i class="info-icon"></i></a>
+						</div>
+						<div class="device-box-img boxshadow radious">
+							<img src="images/devices/iHealthTS28B.png" />
+						</div>
+						<div class="device-bottom">
+							<h3>iHealth TS28B</h3>
+							<div class="device-box-links">
+								<a href="#" class="btn btn-device-1">Search & Buy</a>
+								<div class="info m-info">
+									<a href="" class="info-link" data-toggle="tooltip" title="iHealth TS28B"><i class="info-icon"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+        <div class="content-section">
+			<h2 class="main-title text-center">Pusle Oximeter</h2>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="device-box ">
+						<div class="info">
+							<a href="https://ihealthlabs.com/fitness-devices/wireless-pulse-oximeter/#single/0" class="info-link" data-toggle="tooltip" title="iHealth Air (RPM Device)"><i class="info-icon"></i></a>
+						</div>
+						<div class="device-box-img boxshadow radious">
+							<img src="images/devices/iHealthAir.png" />
+						</div>
+						<div class="device-bottom">
+							<h3>iHealth Air (RPM Device)</h3>
+							<div class="device-box-links">
+								<a target="_blank" href="https://www.google.com/search?q=ihealth+air" class="btn btn-device-1">Search & Buy</a>
+								<div class="info m-info">
+									<a href="https://ihealthlabs.com/fitness-devices/wireless-pulse-oximeter/#single/0" class="info-link" data-toggle="tooltip" title="iHealth Air (RPM Device)"><i class="info-icon"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+
+	<!--		<h2>Digital Stethoscope</h2>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="device-box">
+						<h3>StethIO</h3>
+						<div class="device-box-img">
+							<img src="/images/devices/StethIO.png" />
+						</div>
+						<div class="device-box-links">
+							<a target="_blank" href="https://stethio.com/product/stethoscope/" class="btn btn-device-1">Search & Buy</a>
+							<a href="https://stethio.com/" class="btn btn-device-2">Learn More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+	-->		
+
+		</div>
+
+
+	</div>
+
+	<footer class="m-container-fluid">
+		<div class="container-wrap">
+		   <div class="footer-top">
+			  <div class="row">
+				 <div class="f-left">
+					<h3 class="main-title">About</h3>
+					<p>MyRx365 is a telehealth and remote patient monitoring platform that allows patients to visit doctors remotely through a private and secure audio/video call.</p>
+					<div class="share">
+					   <ul class="list-inline">
+						  <li class="list-inline-item"><a href="https://myrx365pro.page.link/facebook" target="_blank"><i
+							 class="fa fa-facebook"></i></a></li>
+						  <li class="list-inline-item"><a href="https://myrx365pro.page.link/twitter" target="_blank"><i
+							 class="fa fa-twitter"></i></a></li>
+						  <li class="list-inline-item"><a href="https://myrx365pro.page.link/instagram" target="_blank"><i
+							 class="fa fa-instagram"></i></a></li>
+						  <li class="list-inline-item"><a href="https://myrx365pro.page.link/linkedin" target="_blank"><i
+							 class="fa fa-linkedin"></i></a></li>
+					   </ul>
+					</div>
+				 </div>
+				<div class="f-right">
+					<div class="footer-info">
+					   <h3 class="main-title-small">Information</h3>
+					   <ul class="list-unstyled">
+						  <li><a href="blog.html">Blog</a></li>
+						  <li><a href="info-release.html">Info Release</a></li>
+						  <li><a href="legal.html">Legal</a></li>
+						  <!--li><a href="assets/Telehealer-Patient-Brochure-Updated.pdf">Brochure (Patient)</a>
+						  </li>
+						  <li><a href="assets/Telehealer-Doctor-Brichure-Updated.pdf">Brochure (Doctor)</a>
+						  </li-->
+						  <li><a href="support.html">Support</a></li>
+					   </ul>
+					</div>
+					<div class="footer-quicks"> 
+					   <h3 class="main-title-small">Quick Links</h3>
+					   <ul class="list-unstyled">
+						  <li><a href="remote-patient-monitoring.html">RPM</a></li>
+						  <!--li><a href="#">Reimbursements</a></li-->
+						  <li><a href="faq.html">FAQs</a></li>
+						  <!--li><a href="#">Medical Assistants</a></li-->
+						  <li><a href="assets/Patient-care-plan-.pdf">Patient Care Plan</a></li>
+						  <li><a href="assets/Value-based-care-registry.pdf">Value Based Care</a></li>
+						  <li><a href="assets/Valued-care-agreement.pdf">Value Care Agreement</a></li>
+					   </ul>
+					</div>
+				 </div>
+			  </div>
+		   </div>
+		</div>
+	 </footer>
+
+	 <div class="footer-bottom">
+		<p class="text-center">MyRx365, Inc. (c) Copyrights 2020. All rights reserved  95-31 Sutphin Blvd, Jamaica, NY 11435, United States</p>
+	 </div>
+
+		<div class="overlay" ></div>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121557773-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','UA-121557773-1');</script>
+
+
+</body>
+</html>

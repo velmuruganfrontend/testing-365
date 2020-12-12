@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8"/>
+      <title>MyRx365 - Patients</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+      <!-- <link rel="stylesheet" href="css/reset.css"> -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet" />
+      <link rel="stylesheet" href="css/carousel/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/carousel/owl.theme.default.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+      <link rel="icon" href="images/favicon.png" />
+      <!-- Custom Css -->
+      <link rel="stylesheet" href="dist/static/css/custom.css">
+      <!-- Custom Css -->
+      <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+      <script type="text/javascript" src="js/useragent.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.min.js"></script>
+      <!--Internal style-->
+      <style>
+       .owl-next span, .owl-prev span{
+         top: 55%;
+         color: #000;
+       }
+       @media only screen and (max-width: 1024px){ 
+        .work-flow-box img{
+           padding: 20px;
+        }
+        input#mc-embedded-subscribe {
+            width: auto;
+         } 
+         #carousel .single-row{
+            padding-left: 30px !important;
+            padding-right: 30px; 
+         }
+       }
+       @media only screen and (max-width: 720px){  
+         .owl-next span, .owl-prev span{
+            top: auto !important;
+         }
+         .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled{
+            display: block;
+         }
+       }
+       #carousel .partners{
+          text-align: left;
+       }
+       #carousel .single-row {
+         display: flex;
+         align-items: center;
+         margin: 0 auto;
+         justify-content: space-between;
+         margin-bottom: 50px;
+         padding-left: 180px;
+      }
+      #carousel .single-row .c-partners {
+         font-size: 40px;
+         margin-top: 60px;
+      }
+      #carousel .single-row .link-btns {
+         display: flex;
+      }
+      </style>
+       <!--Internal style-->
+   </head>
+   <body class="patient-home">
+      <div class="div-only-mobile">
+         <div class="top-note">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xs-3">
+                     <img class="img-responsive" src="images/favicon.png" />
+                  </div>
+                  <div class="col-xs-6">
+                     <h3>MyRx365</h3>
+                     <p>Download the app on your device</p>
+                  </div>
+                  <div class="col-xs-3">
+                     <a class="button-link ios-btn" href="#">Install</a>
+                     <a class="button-link android-btn" href="#">Install</a>
+                  </div>
+               </div>
+            </div>
+            <a href="#" class="close-link"><i class="fa fa-window-close"></i></a>
+         </div>
+      </div>
+      <div class="container-fluid">
+         <header>
+            <nav class="nav row pt-20">
+               <div class="menu-img col-xs-2 col-sm-4" id="hanbur-icon"><img src="images/hambur.svg" class="cursor-pointer"><span class="menu">Menu</span></div>
+               <!-- <div class="logo col-sm-2"><img src="images/log.svg" alt="logo"></div> -->
+               <div class="center-menu col-xs-7  col-sm-4 text-align-center">
+                  <div> 
+                     <a  class="" href="index.html">
+                     <img src="images/log.svg" alt="logo">
+                     </a>
+                  </div>
+               </div>
+               <!--div class="login col-xs-3 col-sm-4 pull-right">
+                  <ul class="pull-right">
+                     <li class=""><a href="#">Login</a></li>
+                     <li><a class="Sign-up " href="#">Sign Up</a></li>
+                  </ul>
+               </div-->
+            </nav>
+            <div class="side-menu">
+               <div class="side-menu-header pt-20">
+                  <div id="close-icon" class="pl-10 cursor-pointer"><img src="images/cross-2.svg" class="img-responsive pull-left pl-10"></div>
+               </div>
+               <div class="menu-items">
+                  <ul>
+                     <li>
+                        <a href="index.html">Home</a>
+                     </li>
+                     <li>
+                        <a href="remote-patient-monitoring.html">RPM</a>   
+                     </li>
+                     <li>
+                        <a href="providers.html">Providers</a>
+                     </li>
+                     <li>
+                        <a href="#" class="activebtn">Patients</a>
+                     </li>
+                     <li>
+                        <a href="vitals-devices.html">Devices</a>
+                     </li>
+                     <li>
+                        <a href="about.html">About</a>
+                     </li>
+                     <li>
+                        <a href="support.html">Support</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="right-img">
+                  <img class="img-responsive" src="images/menu-right.png">
+               </div>
+               <ul class="sub-menu">
+                  <li>
+                     
+                  </li>
+                  <li>
+                     <a href="support.html">Support</a>
+                  </li>
+               </ul>
+            </div>
+         </header>
+      </div>
+      <div class="banner-wrap" id="banner-wrap">
+         <div class="hero-grand">
+            <div class="hero-parent">
+               <div class="hero-firstchild b-patients">
+               </div>
+               <div class="hero-secondchild">
+                    <div class="hero-content">
+                       <h2 class="hero-heading">Medical care as it should be</h2>
+                       <p class="hero-desc">Save time while getting the same care</p>
+                       <div class="hero-actions hidden-sm hidden-xs">
+                          <div class="hero-action">
+                             <div class="action-one">
+                                <a class="myrx button-primary" href="/transfer-myrx.html">Switch to MyRx365</a>
+                              </div>
+                              <div class="action-two pt-20"> 
+                                <a class="download-app" href="/downloads.html">Download App</a> 
+                              </div>
+                          </div>
+                       </div>
+                    </div>
+               </div>
+               <div class="hero-actions mobile visible-sm visible-xs">
+                  <div class="hero-action">
+                     <div class="action-one">
+                        <a class="myrx button-primary" href="/transfer-myrx.html">Switch to MyRx365</a>
+                      </div>
+                      <div class="action-two pt-20"> 
+                        <a class="download-app" href="/downloads.html">Download App</a> 
+                      </div>
+                  </div>
+               </div> 
+            </div><!--hero-parent-->
+         </div>
+      </div>
+      <div class="overlap-empty-wrap">&nbsp;</div>
+      <div class="content marketing-myrx pt-20">
+         <div class="container-fluid">
+            <div class="container typo">
+               <h2 class="text-center main">Advantages</h2>
+               <div class="row">
+                  <div class="col-sm-4">
+                     <div class="icon-box">
+                        <img  src="images/patients/better-clinic.svg">
+                        <h5>Increases access to doctors</h5>
+                        <p>Be less frustrated and get care when you need it</p>
+                     </div>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="icon-box">
+                        <img  src="images/patients/doc.svg">
+                        <h5>See doctors you know</h5>
+                        <p>Be confident and comforted in knowing your care-giver</p>
+                     </div>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="icon-box">
+                        <img  src="images/patients/liability.svg">
+                        <h5>As easy as a phone call</h5>
+                        <p>Low tech and high satisfaction</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-4">
+                     <div class="icon-box">
+                        <img  src="images/patients/care.svg">
+                        <h5>Less interruption</h5>
+                        <p>No driving, no parking, and no waiting. Minimal impact to your productivity</p>
+                     </div>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="icon-box">
+                        <img src="images/patients/bg.svg">
+                        <h5>Same co-pay as usual and Use personal insurance</h5>
+                        <p>Use the same insurance as you do at your provider's office</p>
+                     </div>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="icon-box">
+                        <img  alt= "" src="images/patients/care-safe.svg">
+                        <h5>Better Care</h5>
+                        <p>Complete coverage via remote patient monitoring and behavioral health integration</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="video-preview video-preview-my-rx mt-50 mb-50">
+               <a href="#" class="youtube-video-trigger" data-toggle="modal" data-target="#youtubeModalCenter">
+               <img alt = "" src="images/banner-video-placeholder@2xx.png" class="w-100" />
+               </a>
+               <div class="modal fade" id="youtubeModalCenter" tabindex="-1" role="dialog" aria-labelledby="youtubeModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                     <div class="modal-content">
+                        <div class="modal-body">
+                           <iframe title="vimeo-player" src="https://player.vimeo.com/video/278934065" width="100%" height="460" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="extra-cost">
+            <div class="container">
+               <div class="row">
+                  <div class="left">
+                     <p class="para">No extra cost to use the app. Use the same insurance as you do at your provider's office.</p>
+                  </div>
+                  <div class="right">
+                     <img src="images/patients/extra-cost.png" class="img-responsive"/>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--New slider section-->
+         <div class="carousel-parent">
+            <div class="container">
+               <div class="c-header text-center">
+                  <h2 class="main-title">MyRx365 Workflow</h2>
+                  <div class="i-icons">
+                     <ul>
+                        <li>
+                           <a href="#"><img src="images/android.png"
+                              alt="Android" /></a>
+                        </li>
+                        <li>
+                           <a href="#"><img src="images/ios.png"
+                              alt="iOS" /></a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="owl-carousel owl-theme  c-footer">
+                  <div class="item">
+                     <img src="images/workflow/dwf-1.png" class="img-responsive"/> 
+                     <p>Download the patients app from the AppStore</p> 
+                  </div>
+                  <div class="item">
+                     <img src="images/workflow/dwf-2.png" class="img-responsive"/>  
+                     <p>Register for an account using basic demographic info, along with your phone and email address</p>
+                  </div>
+                  <div class="item">
+                     <img src="images/workflow/dwf-3.png" class="img-responsive"/>  
+                     <p>Lookup and establish care with your specific providers</p>
+                  </div>
+                  <div class="item">
+                     <img src="images/workflow/dwf-4.png" class="img-responsive"/>  
+                     <p>Send requests for appointments to your provider through the app or via traditional means</p>
+                  </div>
+                  <div class="item">
+                     <img src="images/workflow/dwf-5.png" class="img-responsive"/>  
+                      <p>Consent to a telemedicine visit and confirm your insurance status and demogprahics prior to the call.</p>
+                      <p>Note: Any required payment will be collected by your provider's office</p>
+                  </div>
+                  <div class="item">
+                     <img src="images/workflow/dwf-6.png" class="img-responsive"/>  
+                     <p>Upload any documents that you'd like to review with your doctor</p>
+                  </div>
+                  <div class="item">
+                     <img src="images/workflow/dwf-7.png" class="img-responsive"/>  
+                     <p class="ml-20">Measure your vitals using FDA approved medical remote patient monitoring at your convenience or during a live video call</p>
+                  </div>
+                  <div class="item">
+                     <img src="images/workflow/dwf-8.png" class="img-responsive"/>  
+                     <p>Answer video calls from your provider at the scheduled appointment window to discuss your issues</p>
+                  </div>
+                  <div class="item">
+                     <img src="images/workflow/dwf-8.png" class="img-responsive"/>
+                     <p>Receive prescriptions, lab/radiology orders, and specialist referrals through the app</p>  
+                  </div>
+                  <div class="item">
+                     <img src="images/workflow/dwf-10.png" class="img-responsive"/>  
+                     <p>Upon completion of the visit, review video of the entire encounter</p>
+                  </div>
+                  <div class="item">
+                     <img src="images/workflow/dwf-10.png" class="img-responsive"/>  
+                     <p>Upon completion of the visit, review video of the entire encounter and print/attach the transcript to the
+                        patient's chart within your EHR of choice
+                     </p>
+                  </div>
+                  <div class="item">
+                     <img src="images/workflow/dwf-11.png" class="img-responsive"/>  
+                     <p id="download">Review the recorded encouter, and input CPT or ICD codes into conventional billing system
+                        to payors
+                     </p>
+                  </div>
+               </div>
+            </div>   
+        </div> <!--carousel-parent-->
+        <!--New slider section-->
+
+        <!--New Tab Section-->
+         <div class="container-fluid mt-100 new-tab">
+            <div class="row">
+               <div class="trigger-button" id="tabs">
+                  <div class="pa-0 t-btns">
+                     <div id="tab1" class="trigger-tab active-tab">Remote Patient Monitoring</div>
+                  </div>
+                  <div class="pa-0 t-btns">
+                     <div id="tab2" class="trigger-tab">Behavioural Health Integration</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="tab1C" class="container container-patient">
+            <div class="typo row">
+               <div class="left">
+                  <h2>Remote Patient <br> Monitoring Devices</h2>
+                  <p>One-time purchase from a list of remote patient monitoring devices here – <a href="https://ihealthlabs.com/" target="_blank">https://ihealthlabs.com</a></p>
+                  <p>The TeleHealer platform currently supports the following types of remote patient monitoring devices – Blood Pressure, Pulse Oximeter, Weighing Scale, Thermometer, and blood sugar (TBD)</p>
+               </div>
+               <div class="right bg-clr"> 
+                  <img src="images/patients/rpm.svg" class="img-responsive">
+               </div> 
+            </div>
+         </div>
+         <div id="tab2C" class="white-bg container container-patient">
+            <div class="typo row">
+               <div class="left">
+                  <img src="images/banner/bhi-forms@2x.png" class="img-responsive">
+               </div>
+               <div class="right"> 
+                  <h2>Behavioral Health Integration</h2>
+                  <p>One-time purchase from a list of remote patient monitoring devices here – <a href="https://ihealthlabs.com/" target="_blank">https://ihealthlabs.com</a></p>
+                  <p>The TeleHealer platform currently supports the following types of remote patient monitoring devices – Blood Pressure, Pulse Oximeter, Weighing Scale, Thermometer, and blood sugar (TBD)</p>
+                  <ul>
+                     <li>ASRS (Adult self-reporting system) - ADD/ADHD screening for adults - BHI Form</li>
+                     <li>PHQ9 (Depression screener) - BHI Form</li>
+                     <li>MDQ (Bipolar screener) - BHI Form</li>
+                     <li>Diabetes screening questions</li>
+                     <li>COPD screening questions</li>
+                     <li>Sleep apnea screener</li>
+                     <li>GAD7 (Anxiety screener) - BHI Form</li>
+                     <li>Alcohol abuse - BHI Form</li>
+                     <li>Dementia screener - BHI Form</li>
+                  </ul>
+               </div> 
+            </div>
+         </div>
+         <!--New Tab Section-->
+         <div class="blue-bg mt-50" id="connect">
+            <div class="container">
+               <div class="connect-row">
+                  <div class="left">
+                     <img src="images/mail.svg" alt="" >
+                  </div>
+                 <div class="right">
+                   <h2 class="text-center sign-up-label">Connect</h2>
+                     <div class="row form">
+                        <div class="contact-wrap-1">
+                           <div id="mc_embed_signup">
+                              <form action="https://20deg.us17.list-manage.com/subscribe/post?u=90245aab0f994b9a1270babba&amp;id=3f336d8039" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                 <div id="mc_embed_signup_scroll">
+                                    <div class="mc-field-group">
+                                       <input type="email" value="" name="EMAIL" placeholder="Enter your email id" class="required email form-control" id="mce-EMAIL">
+                                       <input type="hidden" name="ROLE" value="USER">
+                                    </div>
+                                    <div id="mce-responses" class="clear">
+                                       <div class="response" id="mce-error-response" style="display:none"></div>
+                                       <div class="response" id="mce-success-response" style="display:none"></div>
+                                    </div>
+                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d04243dda79f3c1655220f23a_65af81b53a"  tabindex="-1" value=""></div>
+                                    <br/><br/>
+                                    <div class="form-group text-center"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-mail-blue"></div>
+                                 </div>
+                              </form>
+                           </div>
+                           <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='PHONE';ftypes[3]='text';fnames[4]='STATUS';ftypes[4]='text';fnames[6]='ROLE';ftypes[6]='text';fnames[7]='USERGUID';ftypes[7]='text';fnames[8]='USERTYPE';ftypes[8]='text';fnames[9]='DEVICEID';ftypes[9]='text';fnames[10]='CAMERA';ftypes[10]='radio';fnames[11]='MIC';ftypes[11]='radio';fnames[12]='LOCATION';ftypes[12]='radio';fnames[13]='NOTIFY';ftypes[13]='radio';fnames[14]='PHOTO';ftypes[14]='radio';fnames[15]='HEALTHKIT';ftypes[15]='radio';fnames[16]='REGISTERED';ftypes[16]='radio';fnames[5]='TRIALVALID';ftypes[5]='text';fnames[17]='LASTUSE';ftypes[17]='text';fnames[18]='LASTCALL';ftypes[18]='text';fnames[20]='MMERGE20';ftypes[20]='text';fnames[21]='MMERGE21';ftypes[21]='address';fnames[22]='MMERGE22';ftypes[22]='address';fnames[23]='MMERGE23';ftypes[23]='address';fnames[24]='MMERGE24';ftypes[24]='address';fnames[25]='MMERGE25';ftypes[25]='address';fnames[26]='MMERGE26';ftypes[26]='zip';fnames[27]='MMERGE27';ftypes[27]='address';fnames[28]='MMERGE28';ftypes[28]='text';fnames[29]='MMERGE29';ftypes[29]='url';fnames[30]='MMERGE30';ftypes[30]='text';fnames[19]='DOCIDENTIF';ftypes[19]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                           <!--End mc_embed_signup-->
+                           <script type='text/javascript'>
+                              var interval;
+                              
+                              $("#mc-embedded-subscribe").on("click", function () {
+                                 interval = setInterval(function () {
+                                    if ($("#mce-success-response").is(":visible") || $("#mce-error-response").is(":visible")) {
+                                          $("#mce-success-response").is(":visible") && $(".mc-field-group, .sign-up-label, #mc-embedded-subscribe").hide();
+                                          $(".sign-up-tick").show();
+                                          clearInterval(interval);
+                                    }
+                                 }, 100);
+                              });
+                           </script>
+                        </div>
+                     </div>
+                  </div>
+               </div>  <!--Connect-row-->
+            </div>
+         </div>
+      </div>
+      <footer class="m-container-fluid">
+         <div class="container-wrap">
+            <div class="footer-top">
+               <div class="row">
+                  <div class="f-left">
+                     <h3 class="main-title">About</h3>
+                     <p>MyRx365 is a telehealth and remote patient monitoring platform that allows patients to visit doctors remotely through a private and secure audio/video call.</p>
+                     <div class="share">
+                        <ul class="list-inline">
+                           <li class="list-inline-item"><a href="https://myrx365pro.page.link/facebook" target="_blank"><i
+                              class="fa fa-facebook"></i></a></li>
+                           <li class="list-inline-item"><a href="https://myrx365pro.page.link/twitter" target="_blank"><i
+                              class="fa fa-twitter"></i></a></li>
+                           <li class="list-inline-item"><a href="https://myrx365pro.page.link/instagram" target="_blank"><i
+                              class="fa fa-instagram"></i></a></li>
+                           <li class="list-inline-item"><a href="https://myrx365pro.page.link/linkedin" target="_blank"><i
+                              class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+                 <div class="f-right">
+                     <div class="footer-info">
+                        <h3 class="main-title-small">Information</h3>
+                        <ul class="list-unstyled">
+                           <li><a href="blog.html">Blog</a></li>
+                           <li><a href="info-release.html">Info Release</a></li>
+                           <li><a href="legal.html">Legal</a></li>
+                           <!--li><a href="assets/Telehealer-Patient-Brochure-Updated.pdf">Brochure (Patient)</a>
+                           </li>
+                           <li><a href="assets/Telehealer-Doctor-Brichure-Updated.pdf">Brochure (Doctor)</a>
+                           </li-->
+                           <li><a href="support.html">Support</a></li>
+                        </ul>
+                     </div>
+                     <div class="footer-quicks"> 
+                        <h3 class="main-title-small">Quick Links</h3>
+                        <ul class="list-unstyled">
+                           <li><a href="remote-patient-monitoring.html">RPM</a></li>
+                           <!--li><a href="#">Reimbursements</a></li-->
+                           <li><a href="faq.html">FAQs</a></li>
+                           <!--li><a href="#">Medical Assistants</a></li-->
+                           <li><a href="assets/Patient-care-plan-.pdf">Patient Care Plan</a></li>
+                           <li><a href="assets/Value-based-care-registry.pdf">Value Based Care</a></li>
+                           <li><a href="assets/Valued-care-agreement.pdf">Value Care Agreement</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <div class="footer-bottom">
+         <p class="text-center">MyRx365, Inc. (c) Copyrights 2020. All rights reserved  95-31 Sutphin Blvd, Jamaica, NY 11435, United States</p>
+      </div>
+ 
+ 
+ 
+ 
+      <div class="overlay" ></div>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121557773-1"></script>
+      <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+         gtag('js',new Date());gtag('config','UA-121557773-1');
+         
+      </script>
+      <script src="js/owl.carousel.js"></script>
+      <script>
+         jQuery('.owl-carousel').owlCarousel({
+               items:1,
+               loop:false,
+               center:true,
+               margin:10,
+               singleItem: true, 
+               scrollPerPage: true,
+               // autoplay: true,
+               // autoPlaySpeed: 5000,
+               // autoPlayTimeout: 5000,
+               // autoplayHoverPause: true,
+               nav: true,
+               navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
+            })
+             $('.owlStageOuter').append($('.owlDots'))  
+           
+
+            
+      </script>
+   </body>
+</html>

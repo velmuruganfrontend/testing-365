@@ -1,0 +1,8 @@
+.DS_Store
+web\.config
+
+wp-config\.php
+
+wp-configbkp\.php
+
+node_modules

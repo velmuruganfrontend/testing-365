@@ -1,0 +1,30 @@
+{
+  "name": "myrx365",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp_scss": "gulp bundleSass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepakvcd/myrx365.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deepakvcd/myrx365/issues"
+  },
+  "homepage": "https://github.com/deepakvcd/myrx365#readme"
+}
